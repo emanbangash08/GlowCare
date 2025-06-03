@@ -1,0 +1,161 @@
+/* src/components/PatientRequest.css */
+.admin-panel {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px 50px;
+    margin: 30px;
+    border-bottom: 6px;
+    background: white;
+    border-radius: 10px;
+}
+
+.admin-panel h1 {
+    color: #283618;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.request-table th, .request-table td {
+    border: 1px solid #BB6C25;
+    padding: 10px;
+    text-align: left;
+}
+
+.request-table th {
+    background-color: #DDA15C;
+    color: #FEF9E0;
+}
+
+.request-table td {
+    background-color: #FEF9E0;
+    color: #283618;
+}
+
+.request-table td button {
+    display: block;
+    margin: 0 auto; /* Center align the button horizontally */
+    background-color: #5F6C37;
+    color: #FEF9E0;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.request-table td button:hover {
+    background-color: #283618;
+}
+
+.recommendation-section {
+    background-color: #FEF9E0;
+    border: 1px solid #BB6C25;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.recommendation-section h2 {
+    color: #283618;
+    margin-bottom: 20px;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.products-list div {
+    margin-bottom: 10px;
+}
+
+.recommendation-section button {
+    background-color: #5F6C37;
+    color: #FEF9E0;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recommendation-section button:hover {
+    background-color: #283618;
+}
+
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 740px;
+    padding: 10px 50px;
+    margin: 30px;
+    border-bottom: 6px;
+    background: white;
+    border-radius: 10px;
+}
+
+.listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0px;
+    color: #283618;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.listproduct-format {
+    align-items: center;
+    font-weight: 500;
+}
+
+.listproduct-product-icon {
+    height: 80px;
+}
+
+.listproduct-remove-icon {
+    width: 15px;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.listproduct-allproducts {
+    overflow-y: auto;
+}
+
+@media(max-width: 800px) {
+    .list-product {
+        box-sizing: border-box;
+        width: 95%;
+        height: 100%;
+        padding: 10px 30px;
+        margin: 20px auto;
+    }
+    .listproduct-format-main {
+        padding: 15px 0px;
+        color: #283618;
+        font-size: 12px;
+    }
+    .listproduct-product-icon {
+        height: 60px;
+    }
+}

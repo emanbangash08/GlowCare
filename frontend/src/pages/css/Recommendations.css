@@ -1,0 +1,353 @@
+.user-request-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  min-height: 70vh;
+  padding: 40px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #fef9e0 0%, #f5e6b8 50%, #fef9e0 100%);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(187, 108, 37, 0.2);
+}
+
+.user-request-form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.user-request-form-container::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(187, 108, 37, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.user-request-form-container h2 {
+  color: #283618;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, #283618 0%, #5f6c37 50%, #283618 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(40, 54, 24, 0.1);
+  line-height: 1.2;
+}
+
+.user-request-form-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #bb6c25 0%, #5f6c37 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(187, 108, 37, 0.3);
+}
+
+.user-request-form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+  gap: 24px;
+}
+
+.user-request-form-container input,
+.user-request-form-container textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid rgba(187, 108, 37, 0.3);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  color: #283618;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.user-request-form-container input:focus,
+.user-request-form-container textarea:focus {
+  border-color: #bb6c25;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 25px rgba(187, 108, 37, 0.15), 0 0 0 4px rgba(187, 108, 37, 0.1);
+  transform: translateY(-2px);
+}
+
+.user-request-form-container input:hover,
+.user-request-form-container textarea:hover {
+  border-color: rgba(187, 108, 37, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.user-request-form-container input {
+  height: 56px;
+}
+
+.user-request-form-container textarea {
+  height: 120px;
+  resize: vertical;
+  min-height: 120px;
+  max-height: 200px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.user-request-form-container input::placeholder,
+.user-request-form-container textarea::placeholder {
+  color: #5f6c37;
+  opacity: 0.8;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.user-request-form-container input:focus::placeholder,
+.user-request-form-container textarea:focus::placeholder {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+.user-request-form-container button {
+  align-self: center;
+  background: linear-gradient(135deg, #5f6c37 0%, #bb6c25 50%, #5f6c37 100%);
+  color: #fef9e0;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(95, 108, 55, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-width: 160px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-request-form-container button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #283618 0%, #bb6c25 100%);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.user-request-form-container button:hover::before {
+  left: 0;
+}
+
+.user-request-form-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(95, 108, 55, 0.4);
+  color: #fef9e0;
+}
+
+.user-request-form-container button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(95, 108, 55, 0.3);
+}
+
+/* Loading state for button */
+.user-request-form-container button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form field animations */
+.user-request-form-container input,
+.user-request-form-container textarea {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.user-request-form-container input:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.user-request-form-container input:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.user-request-form-container input:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.user-request-form-container textarea:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.user-request-form-container button {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced responsive design */
+@media (max-width: 800px) {
+  .user-request-form-container {
+    width: 95%;
+    padding: 30px 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  .user-request-form-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .user-request-form-container form {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .user-request-form-container input,
+  .user-request-form-container textarea {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .user-request-form-container input {
+    height: 50px;
+  }
+
+  .user-request-form-container textarea {
+    height: 100px;
+  }
+
+  .user-request-form-container button {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-request-form-container {
+    width: 95%;
+    padding: 25px 15px;
+    margin: 15px auto;
+  }
+
+  .user-request-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .user-request-form-container form {
+    gap: 16px;
+  }
+
+  .user-request-form-container input,
+  .user-request-form-container textarea {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .user-request-form-container input {
+    height: 46px;
+  }
+
+  .user-request-form-container textarea {
+    height: 90px;
+  }
+
+  .user-request-form-container button {
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+}
+
+/* Success/Error message styles */
+.success-message {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  animation: slideInDown 0.3s ease;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus indicators for accessibility */
+.user-request-form-container input:focus-visible,
+.user-request-form-container textarea:focus-visible,
+.user-request-form-container button:focus-visible {
+  outline: 2px solid #bb6c25;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for form */
+.user-request-form-container {
+  scroll-behavior: smooth;
+}
